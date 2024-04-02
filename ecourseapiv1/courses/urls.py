@@ -7,7 +7,8 @@ from courses import views
 r= routers.DefaultRouter()
 r.register('categories',views.CategoryViewSet, basename='categories')
 r.register('courses',views.CourseViewSet, basename='courses')
-
+r.register('lessons',views.LessonViewSet,basename='lessons')
+r.register('users',views.LessonViewSet,basename='users')
 
 urlpatterns = [
     path('', include(r.urls))
